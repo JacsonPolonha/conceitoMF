@@ -20,6 +20,7 @@ Criar uma base leve e rápida para futuros projetos front-end
 plaintext
 Copiar
 Editar
+```
 conceito-mf/
 ├── index.html           # Página principal
 ├── style.css            # Estilos principais
@@ -27,6 +28,7 @@ conceito-mf/
 │   ├── imgs/            # Imagens utilizadas
 │   └── fonts/           # (opcional) fontes personalizadas
 └── README.md            # Documentação do projeto
+```
 ### ✨ Destaques do Projeto
 100% feito em HTML5 + CSS3
 
