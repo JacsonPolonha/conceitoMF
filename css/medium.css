@@ -1,0 +1,16 @@
+  /* Telas médias - Menu visível */
+  @media (min-width: 768px) {
+    .menu-label {
+        display: none;
+    }
+    .menu-items {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        background: transparent;
+        position: static;
+    }
+    .menu-items li {
+        padding: 10px 20px;
+    }
+}

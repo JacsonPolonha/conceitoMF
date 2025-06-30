@@ -1,0 +1,6 @@
+ /* Telas grandes */
+ @media (min-width: 1024px) {
+    .menu-items {
+        justify-content: flex-end;
+    }
+}

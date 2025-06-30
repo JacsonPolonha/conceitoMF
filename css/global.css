@@ -1,0 +1,379 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #222;
+}
+
+menu {
+  background: #264653;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative; /* Permite que z-index funcione nos filhos */
+  z-index: 100; /* Garante que fique acima de banner/overlay */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 100%;
+  max-width: 140px;
+  height: auto;
+  display: block;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.menu-label {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.menu-items {
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  background: #264653;
+  position: absolute;
+  right: 10px;
+  top: 100%; /* abaixo do menu */
+  width: 200px;
+  z-index: 999; /* Fica acima do banner e da overlay */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+.menu-items li {
+  padding: 10px;
+  text-align: center;
+}
+
+.menu-items li a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu-items li a:hover {
+  text-decoration: underline;
+}
+
+.menu-toggle:checked+.menu-items {
+  display: flex;
+}
+
+.hero {
+  position: relative;
+  height: 90vh;
+  background-image: url('../assets/imgs/banner.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* camada escura para contraste */
+  z-index: 1;
+}
+
+.hero-conteudo {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  font-weight: 900;
+  margin-bottom: 30px;
+}
+
+.btn {
+  background: #2a9d8f;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.servicos {
+  padding: 60px 20px;
+  background-color: #fff;
+}
+
+.servicos h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background-color: #f6f6f6;
+  padding: 20px;
+  width: 300px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.contato {
+  padding: 60px 20px;
+  background-color: #264653;
+  color: white;
+}
+
+.contato h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Estilo base do formulário */
+form {
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #ccc;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* Campos de entrada e textarea */
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* Campo de textarea específico */
+form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Botão de envio */
+form input[type="submit"] {
+  background-color: #3498db;
+  color: white;
+  padding: 12px;
+  border: none;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+  background-color: #2980b9;
+}
+
+/* Mensagem de sucesso ou erro */
+.mensagem {
+  margin-top: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.diferenciais {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.diferenciais h2 {
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+.lista-diferenciais {
+  list-style: none;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0;
+  display: grid;
+  gap: 15px;
+}
+
+.lista-diferenciais li {
+  background: #fff;
+  padding: 15px 20px;
+  border-left: 5px solid #264653;
+  border-radius: 5px;
+  text-align: left;
+  font-size: 16px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.rodape {
+  background-color: #1d3557;
+  color: #ccc;
+  padding: 40px 20px 20px;
+  font-size: 14px;
+}
+
+.rodape-conteudo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.rodape-coluna h3,
+.rodape-coluna h4 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.rodape-coluna p,
+.rodape-coluna a,
+.rodape-coluna li {
+  color: #ccc;
+  text-decoration: none;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.rodape-coluna a:hover {
+  text-decoration: underline;
+}
+
+.rodape-coluna ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.rodape-direitos {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #ffffff33; /* branco com transparência */
+  padding-top: 15px;
+  font-size: 13px;
+  color: #e0e0e0;
+}
+
+/*PÁGINA SOBRE*/
+.sobre {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  font-size: 1.3rem;
+}
+
+.imagem-sobre {
+  flex: 1 1 400px;
+  text-align: center;
+}
+
+.imagem-sobre img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.05);
+}
+
+.container-sobre {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.texto-sobre {
+  flex: 1 1 500px;
+}
+
+.texto-sobre h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #264653;
+}
+
+.texto-sobre p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/*PÁGINA POLITICA DE PRIVACIDADE*/
+.politica {
+  padding: 60px 20px;
+  background-color: #fdfdfd;
+}
+
+.container-politica {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.container-politica h2 {
+  font-size: 32px;
+  color: #264653;
+  margin-bottom: 20px;
+}
+
+.container-politica h3 {
+  color: #2a9d8f;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.container-politica p {
+  margin-bottom: 15px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container-politica ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.container-politica ul li {
+  margin-bottom: 8px;
+  list-style: disc;
+}
+
